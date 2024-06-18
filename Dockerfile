@@ -26,7 +26,7 @@ EXPOSE 8080
 ENV PORT 8080
 
 # Comando para iniciar la aplicación
-CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["npm", "start", "--host", "0.0.0.0", "--port", "8080"]
 
 
 
