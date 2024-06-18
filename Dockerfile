@@ -5,7 +5,7 @@ FROM node:20 as angular
 WORKDIR /app
 
 # Copiar package.json y package-lock.json
-COPY package*.json ./
+COPY package.json .
 
 # Instalar las dependencias
 RUN npm install
