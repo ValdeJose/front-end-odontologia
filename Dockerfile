@@ -17,10 +17,10 @@ COPY . .
 RUN ng build
 
 # Exponer el puerto que la aplicación va a usar
-EXPOSE 4200
+EXPOSE 8080
 
 # Definir la variable de entorno para el puerto
-ENV PORT 4200
+ENV PORT 8080
 
-# Comando para iniciar la aplicación
-CMD ["ng", "serve"]
+
+
