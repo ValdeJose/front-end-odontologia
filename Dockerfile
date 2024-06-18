@@ -10,6 +10,9 @@ COPY package*.json ./
 # Instalar las dependencias
 RUN npm install
 
+# Instalar Angular CLI globalmente
+RUN npm install -g @angular/cli
+
 # Copiar el resto de la aplicación
 COPY . .
 
@@ -21,6 +24,9 @@ EXPOSE 8080
 
 # Definir la variable de entorno para el puerto
 ENV PORT 8080
+
+# Comando para iniciar la aplicación
+CMD ["ng", "serve"]
 
 
 
