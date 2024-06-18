@@ -1,0 +1,46 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-dd-navbar></app-dd-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="container mx-auto px-6 py-8 max-w-7xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Registrar Cita</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <form [formGroup]="citaForm" (ngSubmit)="onSubmit()" class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="fecha">Fecha</label>
+              <input formControlName="fecha" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="fecha" type="date" placeholder="Fecha">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="hora">Hora</label>
+              <input formControlName="hora" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="hora" type="time" placeholder="Hora">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="motivo">Motivo</label>
+              <textarea formControlName="motivo" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="motivo" placeholder="Motivo"></textarea>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="odontologo">Odontólogo</label>
+              <input formControlName="odontologo" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="odontologo" type="text" placeholder="Odontólogo">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="sede">Sede</label>
+              <input formControlName="sede" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="sede" type="text" placeholder="Sede">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="extras">Extras</label>
+              <input formControlName="extras" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="extras" type="text" placeholder="Extras">
+            </div>
+            <div class="flex justify-center mt-8">
+              <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-opacity-50" type="submit">
+                Registrar Cita
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
