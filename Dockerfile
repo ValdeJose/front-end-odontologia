@@ -17,7 +17,7 @@ RUN npm install -g @angular/cli
 COPY . .
 
 # Construir la aplicación
-RUN npm run build
+# RUN npm run build
 
 # Exponer el puerto que la aplicación va a usar
 EXPOSE 8080
