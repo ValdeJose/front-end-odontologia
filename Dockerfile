@@ -13,15 +13,11 @@ RUN npm install
 # Instalar Angular CLI globalmente
 RUN npm install -g @angular/cli
 
-# Verificar la instalación de Angular CLI y el PATH
-RUN ng --version
-RUN echo $PATH
-
 # Copiar el resto de la aplicación
 COPY . .
 
 # Construir la aplicación
-RUN ng build
+RUN npm run build
 
 # Exponer el puerto que la aplicación va a usar
 EXPOSE 8080
