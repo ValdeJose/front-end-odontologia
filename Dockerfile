@@ -1,5 +1,5 @@
 # Usar una imagen base oficial de Node.js
-FROM node:20
+FROM node:20 as angular
 
 # Crear un directorio de trabajo
 WORKDIR /app
